@@ -16,10 +16,10 @@ const SobreMi = (props) => {
       </Helmet>
       <div className="sobre-mi-header">
         <header data-thq="thq-navbar" className="sobre-mi-navbar">
-          <Link to="/inicio" className="sobre-mi-navlink">
+          <Link to="/" className="sobre-mi-navlink">
             <img
               alt="APE Experience"
-              src="/Material web/logo-optimizado-200h.png"
+              src="/Material web/logo-optimizado-600h.png"
               className="sobre-mi-image"
             />
           </Link>
@@ -33,7 +33,7 @@ const SobreMi = (props) => {
               data-role="Nav"
               className="sobre-mi-nav"
             >
-              <Link to="/inicio" className="sobre-mi-link navLink">
+              <Link to="/" className="sobre-mi-link navLink">
                 Inicio
               </Link>
               <Link to="/sobre-mi" className="sobre-mi-link1 navLink">
@@ -42,11 +42,17 @@ const SobreMi = (props) => {
               <Link to="/servicios" className="sobre-mi-link2 navLink">
                 Servicios
               </Link>
-              <span className="sobre-mi-link3 navLink">Proyectos</span>
-              <span className="sobre-mi-link4 navLink">Blog</span>
-              <span className="sobre-mi-link5 navLink">Contacto</span>
+              <Link to="/proyectos" className="sobre-mi-link3 navLink">
+                Proyectos
+              </Link>
+              <Link to="/blog" className="sobre-mi-link4 navLink">
+                Blog
+              </Link>
+              <Link to="/contacto" className="sobre-mi-link5 navLink">
+                Contacto
+              </Link>
             </nav>
-            <button className="button sobre-mi-register">
+            <Link to="/solicitar-servicio" className="sobre-mi-register button">
               <span className="sobre-mi-text">
                 <span>Solicitar </span>
                 <br></br>
@@ -54,7 +60,7 @@ const SobreMi = (props) => {
               <svg viewBox="0 0 1024 1024" className="sobre-mi-icon">
                 <path d="M512 170l342 342-342 342-60-60 238-240h-520v-84h520l-238-240z"></path>
               </svg>
-            </button>
+            </Link>
           </div>
           <div data-thq="thq-burger-menu" className="sobre-mi-burger-menu">
             <svg viewBox="0 0 1024 1024" className="sobre-mi-icon02">
@@ -126,7 +132,7 @@ const SobreMi = (props) => {
           <div className="sobre-mi-container04">
             <img
               alt="image"
-              src="/Material web/ape-experience-adrian-foto-ejemplo-700w.jpg"
+              src="https://ape-cloud.s3.us-east-2.amazonaws.com/photo_5010571185125173703_y+(1).jpg"
               className="sobre-mi-image1"
             />
           </div>
@@ -134,60 +140,37 @@ const SobreMi = (props) => {
             <h1 className="sobre-mi-text09">Sobre mi</h1>
             <span className="sobre-mi-text10">
               <span>
-                Saludos, mi nombre es Adrian Ojeda, un apasionado del desarrollo
-                web desde temprana edad.
-              </span>
-              <br></br>
-              <span>
-                Con más de 5 años de experiencia laboral en el diseño y
-                optimización SEO de páginas web, así 
-              </span>
-              <span>
-                como en la gestión de redes sociales, tengo un firme dominio de
-                lenguajes de programación 
-              </span>
-              <span>
-                como HTML, CSS, PHP y JavaScript. Además, cuento con amplios
-                conocimientos en el uso de 
-              </span>
-              <span>
-                herramientas como Adobe Photoshop, Illustrator, After Effects y
+                Soy Adrian Ojeda, un apasionado del desarrollo web con más de 5
+                años de experiencia. Domino lenguajes como HTML, CSS, PHP y
+                JavaScript, y tengo amplios conocimientos en herramientas de
+                diseño como Adobe Photoshop, Illustrator, After Effects y
                 Premiere.
               </span>
               <br></br>
               <br></br>
               <span>
-                Mi trayectoria académica incluye estudios en el Colegio La
-                Epifanía en Maracaibo, y sigo en 
-              </span>
-              <span>
-                constante búsqueda de conocimientos para mejorar continuamente.
-                Desde los 12 años, tuve 
-              </span>
-              <span>
-                un fuerte vínculo con la programación web y el diseño, fascinado
-                por cómo las páginas web 
-              </span>
-              <span>
-                transmiten emociones a través de su atractiva composición de
-                colores y presentación. Siempre 
-              </span>
-              <span>
-                he aprendido a través del método de prueba y error, y he
-                adquirido habilidades para construir 
-              </span>
-              <span>
-                y reconstruir sitios web según mis propias preferencias.
+                Desde temprana edad, he estado fascinado por la forma en que las
+                páginas web transmiten emociones a través de su diseño y
+                composición. He adquirido habilidades prácticas construyendo y
+                reconstruyendo sitios web según mis propias preferencias.
               </span>
               <br></br>
+              <br></br>
+              <span>
+                Mi trayectoria académica incluye estudios en el Colegio La
+                Epifanía en Maracaibo, y continúo buscando oportunidades para
+                mejorar y ampliar mis conocimientos. Estoy emocionado por la
+                oportunidad de poner mis habilidades al servicio de nuevos
+                clientes.
+              </span>
             </span>
           </div>
         </div>
       </div>
       <div className="sobre-mi-container06">
         <div className="sobre-mi-container07">
-          <h1 className="sobre-mi-text26">¿Qué busco como Diseñador Web?</h1>
-          <span className="sobre-mi-text27">
+          <h1 className="sobre-mi-text18">¿Qué busco como Diseñador Web?</h1>
+          <span className="sobre-mi-text19">
             <span>
               Mi mayor objetivo como Diseñador Web siempre ha sido ayudar a
               otros a alcanzar sus metas y contribuir al mundo digital de manera
@@ -217,7 +200,7 @@ const SobreMi = (props) => {
             <video
               src
               muted
-              poster="/quotes-1-800w.png"
+              poster="https://ape-cloud.s3.us-east-2.amazonaws.com/FONDO-APE-EXPERIENCE-TRABAJANDO.jpg"
               autoPlay
               controls
               className="sobre-mi-video1"
@@ -247,11 +230,11 @@ const SobreMi = (props) => {
           ></Player>
         </div>
         <div className="sobre-mi-container12">
-          <h1 className="sobre-mi-text33">
+          <h1 className="sobre-mi-text25">
             <span>¿Qué ofrece APE?</span>
             <br></br>
           </h1>
-          <span className="sobre-mi-text36">
+          <span className="sobre-mi-text28">
             <span>
               Siempre me mantengo actualizado con las últimas tendencias en
               Diseño Web y, gracias a mi experiencia adquirida, decidí mostrar
@@ -289,7 +272,7 @@ const SobreMi = (props) => {
       </div>
       <div className="sobre-mi-container13">
         <div className="sobre-mi-container14">
-          <h1 className="sobre-mi-text46">
+          <h1 className="sobre-mi-text38">
             <span>
               Para concluir, me gustaría compartir una frase que siempre
               mantengo en mente al realizar mi 
@@ -314,10 +297,10 @@ const SobreMi = (props) => {
       <footer className="sobre-mi-footer">
         <div className="sobre-mi-content">
           <div className="sobre-mi-details">
-            <Link to="/inicio" className="sobre-mi-navlink1">
+            <Link to="/" className="sobre-mi-navlink1">
               <img
                 alt="APE Experience Pié de Página Logo Negro"
-                src="/Material web/logo-optimizado-200h.png"
+                src="/Material web/logo-optimizado-600h.png"
                 className="sobre-mi-image2"
               />
             </Link>
@@ -330,18 +313,26 @@ const SobreMi = (props) => {
         </div>
         <div className="sobre-mi-content1">
           <div className="sobre-mi-details1">
-            <span className="sobre-mi-text51">Navegación</span>
-            <span className="sobre-mi-text52 a.link">
-              <Link to="/inicio" className="sobre-mi-navlink2">
-                Inicio
-              </Link>
+            <span className="sobre-mi-text43">Navegación</span>
+            <Link to="/" className="sobre-mi-navlink2 a.link">
+              <span className="sobre-mi-text44">Inicio</span>
               <br></br>
-            </span>
-            <span className="sobre-mi-text54 a.link">Sobre mi</span>
-            <span className="sobre-mi-text55 a.link">Servicios</span>
-            <span className="sobre-mi-text56 a.link">Proyectos</span>
-            <span className="sobre-mi-text57 a.link">Blog</span>
-            <span className="sobre-mi-text58 a.link">Contacto</span>
+            </Link>
+            <Link to="/sobre-mi" className="sobre-mi-navlink3 a.link">
+              Sobre mi
+            </Link>
+            <Link to="/servicios" className="sobre-mi-navlink4 a.link">
+              Servicios
+            </Link>
+            <Link to="/proyectos" className="sobre-mi-navlink5 a.link">
+              Proyectos
+            </Link>
+            <Link to="/blog" className="sobre-mi-navlink6 a.link">
+              Blog
+            </Link>
+            <Link to="/contacto" className="sobre-mi-navlink7 a.link">
+              Contacto
+            </Link>
           </div>
           <div className="sobre-mi-socials">
             <a
@@ -377,13 +368,13 @@ const SobreMi = (props) => {
             >
               <img
                 alt="Threads APE Experience"
-                src="/Material web/threads-200h.png"
+                src="/Material web/threads-600h.png"
                 className="sobre-mi-image4 social"
               />
             </a>
           </div>
           <span className="sobre-mi-copyright">
-            Política de Privacidad — Términos y Condiciones — Cookies © 2023
+            Política de Privacidad — Términos y Condiciones — Cookies © 2024
             Derechos reservados por APE Experience.
           </span>
         </div>

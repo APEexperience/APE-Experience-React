@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 
 import { Helmet } from 'react-helmet'
 
+import Pricing14 from '../components/pricing14'
+import Pricing13 from '../components/pricing13'
 import './servicios.css'
 
 const Servicios = (props) => {
@@ -14,10 +16,10 @@ const Servicios = (props) => {
       </Helmet>
       <div className="servicios-header">
         <header data-thq="thq-navbar" className="servicios-navbar">
-          <Link to="/inicio" className="servicios-navlink">
+          <Link to="/" className="servicios-navlink">
             <img
               alt="APE Experience"
-              src="/Material web/logo-optimizado-200h.png"
+              src="/Material web/logo-optimizado-600h.png"
               className="servicios-image"
             />
           </Link>
@@ -31,7 +33,7 @@ const Servicios = (props) => {
               data-role="Nav"
               className="servicios-nav"
             >
-              <Link to="/inicio" className="servicios-link navLink">
+              <Link to="/" className="servicios-link navLink">
                 Inicio
               </Link>
               <Link to="/sobre-mi" className="servicios-link1 navLink">
@@ -40,11 +42,20 @@ const Servicios = (props) => {
               <Link to="/servicios" className="servicios-link2 navLink">
                 Servicios
               </Link>
-              <span className="servicios-link3 navLink">Proyectos</span>
-              <span className="servicios-link4 navLink">Blog</span>
-              <span className="servicios-link5 navLink">Contacto</span>
+              <Link to="/proyectos" className="servicios-link3 navLink">
+                Proyectos
+              </Link>
+              <Link to="/blog" className="servicios-link4 navLink">
+                Blog
+              </Link>
+              <Link to="/contacto" className="servicios-link5 navLink">
+                Contacto
+              </Link>
             </nav>
-            <button className="button servicios-register">
+            <Link
+              to="/solicitar-servicio"
+              className="servicios-register button"
+            >
               <span className="servicios-text">
                 <span>Solicitar </span>
                 <br></br>
@@ -52,7 +63,7 @@ const Servicios = (props) => {
               <svg viewBox="0 0 1024 1024" className="servicios-icon">
                 <path d="M512 170l342 342-342 342-60-60 238-240h-520v-84h520l-238-240z"></path>
               </svg>
-            </button>
+            </Link>
           </div>
           <div data-thq="thq-burger-menu" className="servicios-burger-menu">
             <svg viewBox="0 0 1024 1024" className="servicios-icon02">
@@ -119,7 +130,7 @@ const Servicios = (props) => {
           </div>
         </header>
       </div>
-      <div className="parallax-container servicios-hero">
+      <div className="servicios-hero parallax-container">
         <span className="servicios-text09 parallax-image">¿Qué necesitas?</span>
         <h1 className="servicios-text10 parallax-image">
           <span className="servicios-text11">Servicios</span>
@@ -143,14 +154,164 @@ const Servicios = (props) => {
           </svg>
           <input
             type="text"
-            placeholder="placeholder"
-            className="input servicios-textinput"
+            placeholder="Solicita rápidamente"
+            className="servicios-textinput input"
           />
-          <button type="button" className="button servicios-button">
+          <button type="button" className="servicios-button button">
             Buscar
           </button>
         </div>
       </div>
+      <Pricing14
+        plan1="Plan Informativo"
+        plan2="Plan Tienda Virtual"
+        plan3="Plan Plataforma Avanzada"
+        plan11="Plan Informativo"
+        plan21="Plan Tienda Virtual"
+        plan31="Plan Plataforma Avanzada"
+        content1="Selecciona el plan perfecto para ti"
+        content2="Consigue los resultados ideales para tu negocio con nuestros planes de páginas web"
+        heading1="Planes para Páginas Web"
+        plan1Price="250$"
+        plan2Price="300$"
+        plan3Price="400$"
+        plan1Action="Solicitar ahora"
+        plan1Price1="250$"
+        plan1Yearly="Incluye pago anual de mantenimiento de servidor"
+        plan2Action="Solicitar ahora"
+        plan2Price1="300$"
+        plan2Yearly="Incluye pago anual de mantenimiento de servidor"
+        plan3Action="Solicitar ahora"
+        plan3Price1="400$"
+        plan3Yearly="Incluye pago anual de mantenimiento de servidor"
+        plan1Action1="Solicitar ahora"
+        plan1Yearly1="Incluye pago anual de mantenimiento de servidor"
+        plan2Action1="Solicitar ahora"
+        plan2Yearly1="Incluye pago anual de mantenimiento de servidor"
+        plan3Action1="Solicitar ahora"
+        plan3Yearly1="Incluye pago anual de mantenimiento de servidor"
+        plan1Feature21="250$"
+        plan1Feature31="250$"
+        plan2Feature31="300$"
+        plan2Feature41="300$"
+      ></Pricing14>
+      <Pricing13
+        plan1="Plan para Emprendimiento"
+        plan2="Plan para Empresas"
+        plan11="Plan para Emprendimiento"
+        plan21="Plan para Empresas"
+        content1="Selecciona el plan perfecto para ti"
+        content2="Mejora el alcance de tu marca en redes sociales según tu selección"
+        heading1="Planes para Redes Sociales"
+        plan1Price="15$/ por semana"
+        plan2Price="100$/ por mes"
+        plan1Action="Solicitar ahora"
+        plan1Price1="15$/ por semana"
+        plan1Yearly="o 60$ al mes"
+        plan2Action="Solicitar ahora"
+        plan2Price1="100$/ por mes"
+        plan2Yearly="25$/ por semana"
+        plan1Action1="Solicitar ahora"
+        plan1Yearly1="o 60$ al mes"
+        plan2Action1="Solicitar ahora"
+        plan2Yearly1="25$/ por semana"
+        rootClassName="pricing13-root-class-name"
+      ></Pricing13>
+      <div className="servicios-container3">
+        <div className="servicios-container4">
+          <h1 className="servicios-text16">
+            Personaliza tu servicio ajustado a lo que necesitas para tu negocio
+          </h1>
+        </div>
+        <button type="button" className="servicios-button1 button">
+          Enviar ahora
+        </button>
+      </div>
+      <footer className="servicios-footer">
+        <div className="servicios-content">
+          <div className="servicios-details">
+            <Link to="/" className="servicios-navlink1">
+              <img
+                alt="APE Experience Pié de Página Logo Negro"
+                src="/Material web/logo-optimizado-600h.png"
+                className="servicios-image1"
+              />
+            </Link>
+            <p className="servicios-description">
+              Soluciones a medida para crear tu sitio web profesional, atractivo
+              y funcional con la tecnología más actualizada totalmente a tu
+              alcance.
+            </p>
+          </div>
+        </div>
+        <div className="servicios-content1">
+          <div className="servicios-details1">
+            <span className="servicios-text17">Navegación</span>
+            <Link to="/" className="servicios-navlink2 a.link">
+              <span className="servicios-text18">Inicio</span>
+              <br></br>
+            </Link>
+            <Link to="/sobre-mi" className="servicios-navlink3 a.link">
+              Sobre mi
+            </Link>
+            <Link to="/servicios" className="servicios-navlink4 a.link">
+              Servicios
+            </Link>
+            <Link to="/proyectos" className="servicios-navlink5 a.link">
+              Proyectos
+            </Link>
+            <Link to="/blog" className="servicios-navlink6 a.link">
+              Blog
+            </Link>
+            <Link to="/contacto" className="servicios-navlink7 a.link">
+              Contacto
+            </Link>
+          </div>
+          <div className="servicios-socials">
+            <a
+              href="https://instagram.com/ape_experience/"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="servicios-link6"
+            >
+              <img
+                alt="Instagram APE Experience"
+                src="/instagram.svg"
+                className="servicios-image2 social"
+              />
+            </a>
+            <a
+              href="https://facebook.com/apeexperienceve/"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="servicios-link7"
+            >
+              <svg
+                viewBox="0 0 602.2582857142856 1024"
+                className="servicios-icon14 social"
+              >
+                <path d="M548 6.857v150.857h-89.714c-70.286 0-83.429 33.714-83.429 82.286v108h167.429l-22.286 169.143h-145.143v433.714h-174.857v-433.714h-145.714v-169.143h145.714v-124.571c0-144.571 88.571-223.429 217.714-223.429 61.714 0 114.857 4.571 130.286 6.857z"></path>
+              </svg>
+            </a>
+            <a
+              href="https://threads.com/ape_experience/"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="servicios-link8"
+            >
+              <img
+                alt="Threads APE Experience"
+                src="/Material web/threads-600h.png"
+                className="servicios-image3 social"
+              />
+            </a>
+          </div>
+          <span className="servicios-copyright">
+            Política de Privacidad — Términos y Condiciones — Cookies © 2024
+            Derechos reservados por APE Experience.
+          </span>
+        </div>
+      </footer>
     </div>
   )
 }

@@ -287,18 +287,6 @@
   font-size: 32px;
   font-family: Open Sans;
 }
-.ape-experience-en-construccin-text13 {
-  font-style: normal;
-  font-weight: 700;
-}
-.ape-experience-en-construccin-text14 {
-  font-style: normal;
-  font-weight: 700;
-}
-.ape-experience-en-construccin-text15 {
-  font-style: normal;
-  font-weight: 700;
-}
 @media(max-width: 1440px) {
   .ape-experience-en-construccin-video {
     top: 0px;
@@ -530,6 +518,15 @@
   }
 }
 @media(max-width: 479px) {
+  .ape-experience-en-construccin-hero {
+    left: 0px;
+    right: 0px;
+    height: 100%;
+    margin: auto;
+  }
+  .ape-experience-en-construccin-image {
+    align-self: center;
+  }
   .ape-experience-en-construccin-mobile-menu {
     padding: 16px;
   }
@@ -539,7 +536,36 @@
   .ape-experience-en-construccin-icon-group {
     justify-content: center;
   }
+  .ape-experience-en-construccin-hero-content {
+    flex-wrap: wrap;
+  }
   .ape-experience-en-construccin-text09 {
-    font-size: 50px;
+    font-size: 32px;
+  }
+  .ape-experience-en-construccin-caption {
+    flex-wrap: wrap;
+    align-self: center;
+    justify-content: flex-start;
+  }
+  .ape-experience-en-construccin-caption1 {
+    fill: var(--dl-color-theme-secondary1);
+    color: var(--dl-color-theme-secondary1);
+    width: 100%;
+    font-size: 32px;
+    font-style: normal;
+    font-family: Open Sans;
+    font-weight: 500;
+  }
+  .ape-experience-en-construccin-text13 {
+    color: #19b9a2;
+    font-size: 32px;
+  }
+  .ape-experience-en-construccin-text14 {
+    color: #19b9a2;
+    font-size: 32px;
+  }
+  .ape-experience-en-construccin-text15 {
+    color: #19b9a2;
+    font-size: 32px;
   }
 }

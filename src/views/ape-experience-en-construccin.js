@@ -9,8 +9,11 @@ const APEExperienceEnConstruccin = (props) => {
   return (
     <div className="ape-experience-en-construccin-container">
       <Helmet>
-        <title>APE Experience</title>
-        <meta property="og:title" content="APE Experience" />
+        <title>APE-Experience-en-Construccin - APE Experience</title>
+        <meta
+          property="og:title"
+          content="APE-Experience-en-Construccin - APE Experience"
+        />
         <meta name="robots" content="noindex" />
       </Helmet>
       <video
@@ -36,10 +39,7 @@ const APEExperienceEnConstruccin = (props) => {
             data-thq="thq-navbar"
             className="ape-experience-en-construccin-navbar"
           >
-            <Link
-              to="/inicio"
-              className="ape-experience-en-construccin-navlink"
-            >
+            <Link to="/" className="ape-experience-en-construccin-navlink">
               <img
                 alt="APE Experience"
                 src="/Material web/logo-optimizado-200h.png"
@@ -57,7 +57,7 @@ const APEExperienceEnConstruccin = (props) => {
                 className="ape-experience-en-construccin-nav"
               >
                 <Link
-                  to="/inicio"
+                  to="/"
                   className="ape-experience-en-construccin-link navLink"
                 >
                   Inicio

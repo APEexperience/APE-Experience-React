@@ -2,23 +2,17 @@ import React from 'react'
 
 import { Helmet } from 'react-helmet'
 
+import NotFound4 from '../components/not-found4'
 import './not-found.css'
 
 const NotFound = (props) => {
   return (
     <div className="not-found-container">
       <Helmet>
-        <title>404 - Not Found</title>
+        <title>Not-Found - APE Experience</title>
+        <meta property="og:title" content="Not-Found - APE Experience" />
       </Helmet>
-      <h3>OOPS! PAGE NOT FOUND</h3>
-      <div className="not-found-container1">
-        <h1 className="not-found-text1">404</h1>
-      </div>
-      <div className="not-found-container2">
-        <h2 className="not-found-text2">
-          WE ARE SORRY, BUT THE PAGE YOU REQUESTED WAS NOT FOUND
-        </h2>
-      </div>
+      <NotFound4 rootClassName="not-found4-root-class-name"></NotFound4>
     </div>
   )
 }

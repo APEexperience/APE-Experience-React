@@ -8,7 +8,11 @@ import {
 } from 'react-router-dom'
 
 import './style.css'
+import Contacto from './views/contacto'
 import APEExperienceEnConstruccin from './views/ape-experience-en-construccin'
+import Blog from './views/blog'
+import Proyectos from './views/proyectos'
+import SolicitarServicio from './views/solicitar-servicio'
 import Servicios from './views/servicios'
 import Inicio from './views/inicio'
 import SobreMi from './views/sobre-mi'
@@ -18,9 +22,17 @@ const App = () => {
   return (
     <Router>
       <Switch>
-        <Route component={APEExperienceEnConstruccin} exact path="/" />
+        <Route component={Contacto} exact path="/contacto" />
+        <Route
+          component={APEExperienceEnConstruccin}
+          exact
+          path="/ape-experience-en-construccin"
+        />
+        <Route component={Blog} exact path="/blog" />
+        <Route component={Proyectos} exact path="/proyectos" />
+        <Route component={SolicitarServicio} exact path="/solicitar-servicio" />
         <Route component={Servicios} exact path="/servicios" />
-        <Route component={Inicio} exact path="/inicio" />
+        <Route component={Inicio} exact path="/" />
         <Route component={SobreMi} exact path="/sobre-mi" />
         <Route component={NotFound} path="**" />
         <Redirect to="**" />

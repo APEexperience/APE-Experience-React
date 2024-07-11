@@ -1,0 +1,36 @@
+.banner1-container {
+  gap: var(--dl-space-space-unit);
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+.banner1-max-width {
+  gap: var(--dl-space-space-oneandhalfunits);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.banner1-container1 {
+  gap: var(--dl-space-space-halfunit);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.banner1-title {
+  text-align: center;
+}
+@media(max-width: 1440px) {
+  .banner1-container {
+    padding: 0px;
+  }
+  .banner1-max-width {
+    width: auto;
+    padding: var(--dl-space-space-twounits);
+    border-radius: var(--dl-radius-radius-radius2);
+    background-color: #F18C0D;
+  }
+  .banner1-title {
+    color: #ffffff;
+    font-family: Source Sans Pro;
+  }
+}

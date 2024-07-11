@@ -12,8 +12,8 @@ const Inicio = (props) => {
   return (
     <div className="inicio-container">
       <Helmet>
-        <title>Inicio - APE Experience</title>
-        <meta property="og:title" content="Inicio - APE Experience" />
+        <title>APE Experience</title>
+        <meta property="og:title" content="APE Experience" />
       </Helmet>
       <video
         src="https://ape-experience.com/Material web/Imagen%20Heroe%20APE%20Experience.mp4"
@@ -40,7 +40,7 @@ const Inicio = (props) => {
         </div>
         <div className="inicio-container02">
           <header data-thq="thq-navbar" className="inicio-navbar">
-            <Link to="/inicio" className="inicio-navlink">
+            <Link to="/" className="inicio-navlink">
               <img
                 alt="APE Experience"
                 src="/Material web/logo-optimizado-200h.png"
@@ -57,7 +57,7 @@ const Inicio = (props) => {
                 data-role="Nav"
                 className="inicio-nav"
               >
-                <Link to="/inicio" className="inicio-link navLink">
+                <Link to="/" className="inicio-link navLink">
                   Inicio
                 </Link>
                 <Link to="/sobre-mi" className="inicio-link01 navLink">
@@ -66,11 +66,17 @@ const Inicio = (props) => {
                 <Link to="/servicios" className="inicio-link02 navLink">
                   Servicios
                 </Link>
-                <span className="inicio-link03 navLink">Proyectos</span>
-                <span className="inicio-link04 navLink">Blog</span>
-                <span className="inicio-link05 navLink">Contacto</span>
+                <Link to="/proyectos" className="inicio-link03 navLink">
+                  Proyectos
+                </Link>
+                <Link to="/blog" className="inicio-link04 navLink">
+                  Blog
+                </Link>
+                <Link to="/contacto" className="inicio-link05 navLink">
+                  Contacto
+                </Link>
               </nav>
-              <button className="button inicio-register">
+              <Link to="/solicitar-servicio" className="inicio-register button">
                 <span className="inicio-text">
                   <span>Solicitar </span>
                   <br></br>
@@ -78,7 +84,7 @@ const Inicio = (props) => {
                 <svg viewBox="0 0 1024 1024" className="inicio-icon">
                   <path d="M512 170l342 342-342 342-60-60 238-240h-520v-84h520l-238-240z"></path>
                 </svg>
-              </button>
+              </Link>
             </div>
             <div data-thq="thq-burger-menu" className="inicio-burger-menu">
               <svg viewBox="0 0 1024 1024" className="inicio-icon02">
@@ -159,21 +165,18 @@ const Inicio = (props) => {
             <span> Optimizado</span>
           </h1>
           <div className="inicio-caption">
-            <button className="button-style-1 button inicio-register2">
-              <span className="inicio-text13">¡Solicita ahora!</span>
-            </button>
+            <a
+              href="https://#newsletter"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="inicio-register2 button-style-1 button"
+            >
+              <span className="inicio-text13">¡Suscríbete ahora!</span>
+            </a>
             <p className="inicio-caption1">
               <span className="inicio-text14">
-                Suscríbete para recibir la próxima promoción del
+                Suscríbete para recibir nuestras próximas promociones.
               </span>
-              <span>
-                <span
-                  dangerouslySetInnerHTML={{
-                    __html: ' ',
-                  }}
-                />
-              </span>
-              <span className="inicio-text16">15/01/2024.</span>
               <br></br>
             </p>
           </div>
@@ -192,7 +195,7 @@ const Inicio = (props) => {
             <div className="inicio-list">
               <div className="inicio-note">
                 <div className="inicio-point"></div>
-                <p className="inicio-text20">
+                <p className="inicio-text18">
                   En APE Experience, obtienes soluciones a medida para crear tu
                   sitio web profesional, atractivo y funcional. Estamos
                   enfocados en negocios que no tienen página web o que quieren
@@ -224,7 +227,7 @@ const Inicio = (props) => {
               usuario
             </h3>
             <button className="inicio-register3 button button-style-2">
-              <span className="inicio-text21">
+              <span className="inicio-text19">
                 Deslúmbrate con experiencias visuales de vanguardia
               </span>
               <svg viewBox="0 0 1024 1024" className="inicio-icon14">
@@ -252,10 +255,10 @@ const Inicio = (props) => {
                   className="inicio-link06"
                 >
                   <div className="inicio-container06">
-                    <h6 className="inicio-text22">
+                    <h6 className="inicio-text20">
                       Proyecto: Cuidarte Es Amarte
                     </h6>
-                    <span className="inicio-text23">
+                    <span className="inicio-text21">
                       Renovación de Diseño Web
                     </span>
                     <img
@@ -274,10 +277,10 @@ const Inicio = (props) => {
                   className="inicio-link07"
                 >
                   <div className="inicio-container08">
-                    <h6 className="inicio-text24">
+                    <h6 className="inicio-text22">
                       Proyecto: IME Job Solutions
                     </h6>
-                    <span className="inicio-text25">
+                    <span className="inicio-text23">
                       Desarrollo de Página Web
                     </span>
                     <img
@@ -296,8 +299,8 @@ const Inicio = (props) => {
                   className="inicio-link08"
                 >
                   <div className="inicio-container10">
-                    <h6 className="inicio-text26">Proyecto: Muebles New</h6>
-                    <span className="inicio-text27">
+                    <h6 className="inicio-text24">Proyecto: Muebles New</h6>
+                    <span className="inicio-text25">
                       <span>Renovación de Diseño Web</span>
                       <br></br>
                     </span>
@@ -317,8 +320,8 @@ const Inicio = (props) => {
                   className="inicio-link09"
                 >
                   <div className="inicio-container12">
-                    <h6 className="inicio-text30">Proyecto: Agroabeca</h6>
-                    <span className="inicio-text31">
+                    <h6 className="inicio-text28">Proyecto: Agroabeca</h6>
+                    <span className="inicio-text29">
                       Desarrollo de Página Web
                     </span>
                     <img
@@ -352,8 +355,8 @@ const Inicio = (props) => {
               </div>
               <h4 className="inicio-title">Sobre Adrian Ojeda</h4>
               <p className="inicio-caption2">
-                <span className="inicio-text32">
-                  Soy Adrian Ojeda, un apasionado diseñador web con más de 5
+                <span className="inicio-text30">
+                  Soy Adrian Ojeda, un apasionado diseñador web con más de 6
                   años de experiencia en optimización SEO, desarrollo web y
                   diseño de redes sociales. Dominio de lenguajes de programación
                   como
@@ -363,10 +366,10 @@ const Inicio = (props) => {
                     }}
                   />
                 </span>
-                <span className="inicio-text33">
+                <span className="inicio-text31">
                   HTML, CSS, PHP y JavaScript
                 </span>
-                <span className="inicio-text34">
+                <span className="inicio-text32">
                   , así como del uso de programas como
                   <span
                     dangerouslySetInnerHTML={{
@@ -374,13 +377,13 @@ const Inicio = (props) => {
                     }}
                   />
                 </span>
-                <span className="inicio-text35">
+                <span className="inicio-text33">
                   Adobe Photoshop, Illustrator, After Effects y Premiere.
                 </span>
-                <br className="inicio-text36"></br>
-                <br className="inicio-text37"></br>
-                <span className="inicio-text38">APE Experience</span>
-                <span className="inicio-text39">
+                <br className="inicio-text34"></br>
+                <br className="inicio-text35"></br>
+                <span className="inicio-text36">APE Experience</span>
+                <span className="inicio-text37">
                   {' '}
                   es mi marca personal, donde ofrezco soluciones en diseño web
                   que ayudan a las empresas a destacarse en el mercado y
@@ -388,15 +391,15 @@ const Inicio = (props) => {
                   experiencia y conocimiento para llevar tu página web al
                   siguiente nivel.
                 </span>
-                <br className="inicio-text40"></br>
-                <br className="inicio-text41"></br>
-                <span className="inicio-text42">
-                  Adrian Ojeda - Diseñador Web &amp; Especialista en SEO
+                <br className="inicio-text38"></br>
+                <br className="inicio-text39"></br>
+                <span className="inicio-text40">
+                  Adrian Ojeda - Diseñador Web
                 </span>
               </p>
             </div>
             <button className="inicio-register4 button button-style-2">
-              <span className="inicio-text43">Conoce más sobre mi</span>
+              <span className="inicio-text41">Conoce más sobre mi</span>
               <svg viewBox="0 0 1024 1024" className="inicio-icon16">
                 <path d="M512 170l342 342-342 342-60-60 238-240h-520v-84h520l-238-240z"></path>
               </svg>
@@ -405,7 +408,7 @@ const Inicio = (props) => {
           <div className="inicio-container16">
             <img
               alt="image"
-              src="/Material web/ape-experience-adrian-foto-ejemplo-500w.jpg"
+              src="https://ape-cloud.s3.us-east-2.amazonaws.com/photo_5010571185125173703_y+(1).jpg"
               className="inicio-image09"
             />
           </div>
@@ -420,7 +423,7 @@ const Inicio = (props) => {
           <div className="inicio-video1">
             <video
               src
-              poster="/quotes-1-1400w.png"
+              poster="https://ape-cloud.s3.us-east-2.amazonaws.com/FONDO-VIDEO-APE-EXPERIENCE.jpg"
               className="inicio-video2"
             ></video>
             <img alt="image" src="/play.svg" className="inicio-image10" />
@@ -437,7 +440,7 @@ const Inicio = (props) => {
           <div className="inicio-header5">
             <div className="inicio-section-numeral">
               <div className="inicio-divide"></div>
-              <p className="inicio-text44">02</p>
+              <p className="inicio-text42">02</p>
             </div>
             <div data-aos="fade-right" className="inicio-heading1">
               <h6 className="inicio-title1">Blog</h6>
@@ -487,7 +490,7 @@ const Inicio = (props) => {
           <div className="inicio-header6">
             <div className="inicio-section-numeral1">
               <div className="inicio-divide1"></div>
-              <p className="inicio-text47">03</p>
+              <p className="inicio-text45">03</p>
             </div>
             <div data-aos="fade-right" className="inicio-heading2">
               <p className="inicio-title2">
@@ -586,16 +589,16 @@ const Inicio = (props) => {
             <p className="inicio-title3">
               Estás a un clic de distancia de alcanzar las estrellas 🌟👆
             </p>
-            <button className="inicio-button1 button">
-              <span className="inicio-text50">
+            <Link to="/solicitar-servicio" className="inicio-navlink1 button">
+              <span className="inicio-text48">
                 <span>¡Solicita tu servicio ahora!</span>
                 <br></br>
               </span>
-            </button>
+            </Link>
           </div>
         </section>
       </section>
-      <section className="inicio-subscribe">
+      <section className="newsletter inicio-subscribe">
         <div className="inicio-main">
           <p className="inicio-header7">
             Suscríbete a mi newsletter para poder recibir promociones y
@@ -618,14 +621,14 @@ const Inicio = (props) => {
                 className="inicio-textinput1 input"
               />
             </div>
-            <span className="inicio-text53">
+            <span className="inicio-text51">
               Al enviar, acepta recibir comunicaciones por correo electrónico de
               APE Experience, incluidas próximas promociones y boletos con
               descuento, información y acceso a eventos exclusivos solo por
               invitación.
             </span>
-            <button className="inicio-button2 button">
-              <span className="inicio-text54">
+            <button className="inicio-button1 button">
+              <span className="inicio-text52">
                 <span>Suscribirme al newsletter</span>
                 <br></br>
               </span>
@@ -636,10 +639,10 @@ const Inicio = (props) => {
       <footer className="inicio-footer">
         <div className="inicio-content6">
           <div className="inicio-details5">
-            <Link to="/inicio" className="inicio-navlink1">
+            <Link to="/" className="inicio-navlink2">
               <img
                 alt="APE Experience Pié de Página Logo Negro"
-                src="/Material web/ape-experience-logo-negro%20(1)-200h.png"
+                src="/Material web/ape-experience-logo-negro%20(1)-600h.png"
                 className="inicio-image18"
               />
             </Link>
@@ -652,18 +655,26 @@ const Inicio = (props) => {
         </div>
         <div className="inicio-content7">
           <div className="inicio-details6">
-            <span className="inicio-text57">Navegación</span>
-            <span className="inicio-text58 a.link">
-              <Link to="/inicio" className="inicio-navlink2">
-                Inicio
-              </Link>
+            <span className="inicio-text55">Navegación</span>
+            <Link to="/" className="inicio-navlink3 a.link">
+              <span className="inicio-text56">Inicio</span>
               <br></br>
-            </span>
-            <span className="inicio-text60 a.link">Sobre mi</span>
-            <span className="inicio-text61 a.link">Servicios</span>
-            <span className="inicio-text62 a.link">Proyectos</span>
-            <span className="inicio-text63 a.link">Blog</span>
-            <span className="inicio-text64 a.link">Contacto</span>
+            </Link>
+            <Link to="/sobre-mi" className="inicio-navlink4 a.link">
+              Sobre mi
+            </Link>
+            <Link to="/servicios" className="inicio-navlink5 a.link">
+              Servicios
+            </Link>
+            <Link to="/proyectos" className="inicio-navlink6 a.link">
+              Proyectos
+            </Link>
+            <Link to="/blog" className="inicio-navlink7 a.link">
+              Blog
+            </Link>
+            <Link to="/contacto" className="inicio-navlink8 a.link">
+              Contacto
+            </Link>
           </div>
           <div className="inicio-socials">
             <a
@@ -699,13 +710,13 @@ const Inicio = (props) => {
             >
               <img
                 alt="Threads APE Experience"
-                src="/Material web/threads-200h.png"
+                src="/Material web/threads-600h.png"
                 className="inicio-image20 social"
               />
             </a>
           </div>
           <span className="inicio-copyright">
-            Política de Privacidad — Términos y Condiciones — Cookies © 2023
+            Política de Privacidad — Términos y Condiciones — Cookies © 2024
             Derechos reservados por APE Experience.
           </span>
         </div>
