@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
 import { Link } from 'react-router-dom'
 
 import Script from 'dangerous-html/react'
@@ -6,9 +7,39 @@ import { Helmet } from 'react-helmet'
 
 import SectionNumeral from '../components/section-numeral'
 import BlogPostCard2 from '../components/blog-post-card2'
+
 import './inicio.css'
 
 const Inicio = (props) => {
+  const[name, setName] = useState('')
+  const[email, setEmail] = useState('')
+
+  useEffect(() => {
+    fetchnewsletters();
+  }, [])
+
+  const fetchnewsletters = () => {
+    axios
+    .get('http://localhost/newsletters')
+    .then((res) => {
+      console.log(res.data)
+    })
+  }
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    axios
+    .post('http://localhost/newsletters', { name, email })
+    .then(() => {
+      setName('')
+      setEmail('')
+      fetchnewsletters('');
+    })
+    .catch((error) => {
+      console.log('No ha podido enviarse sus suscripción')
+    })
+  }
+
   return (
     <div className="inicio-container">
       <Helmet>
@@ -599,12 +630,12 @@ const Inicio = (props) => {
         </section>
       </section>
       <section className="newsletter inicio-subscribe">
-        <div className="inicio-main">
-          <p className="inicio-header7">
-            Suscríbete a mi newsletter para poder recibir promociones y
-            descuentos
-          </p>
-          <div className="inicio-content5">
+      <div className="inicio-main">
+        <p className="inicio-header7">
+          Suscr�bete a mi newsletter para poder recibir promociones y descuentos
+        </p>
+        <div className="inicio-content5">
+          <form onSubmit={handleSubmit}>
             <div className="inicio-inputs">
               <input
                 type="text"
@@ -612,6 +643,8 @@ const Inicio = (props) => {
                 placeholder="Nombre *"
                 autoComplete="name"
                 className="inicio-textinput input"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
               />
               <input
                 type="email"
@@ -619,24 +652,24 @@ const Inicio = (props) => {
                 placeholder="Correo *"
                 autoComplete="email"
                 className="inicio-textinput1 input"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <span className="inicio-text51">
-              Al enviar, acepta recibir comunicaciones por correo electrónico de
-              APE Experience, incluidas próximas promociones y boletos con
-              descuento, información y acceso a eventos exclusivos solo por
-              invitación.
+              Al enviar, acepta recibir comunicaciones por correo electr�nico de APE Experience, incluidas pr�ximas promociones y boletos con descuento, informaci�n y acceso a eventos exclusivos solo por invitaci�n.
             </span>
-            <button className="inicio-button1 button">
+            <button type="submit" className="inicio-button1 button">
               <span className="inicio-text52">
                 <span>Suscribirme al newsletter</span>
                 <br></br>
               </span>
             </button>
-          </div>
+          </form>
         </div>
-      </section>
-      <footer className="inicio-footer">
+      </div>
+    </section>
+	<footer className="inicio-footer">
         <div className="inicio-content6">
           <div className="inicio-details5">
             <Link to="/" className="inicio-navlink2">
