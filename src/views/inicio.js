@@ -7,7 +7,7 @@ import { Helmet } from 'react-helmet'
 
 import SectionNumeral from '../components/section-numeral'
 import BlogPostCard2 from '../components/blog-post-card2'
-import Newsletter from './newsletter'
+import ViewNewsletter from './viewnewsletter'
 
 
 import './inicio.css'
