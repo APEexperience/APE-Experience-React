@@ -7,7 +7,7 @@ import { Helmet } from 'react-helmet'
 
 import SectionNumeral from '../components/section-numeral'
 import BlogPostCard2 from '../components/blog-post-card2'
-import ViewNewsletter from './ViewNewsletter'
+import ViewNewsletter from './Newsletters'
 
 
 import './inicio.css'
@@ -17,12 +17,12 @@ const Inicio = (props) => {
   const[email, setEmail] = useState('')
 
   useEffect(() => {
-    fetchnewsletters();
+    fetchNewsletters();
   }, [])
 
-  const fetchnewsletters = () => {
+  const fetchNewsletters = () => {
     axios
-    .get('https://ape-experience.com/newsletters')
+    .get('https://ape-experience.com/Newsletters')
     .then((res) => {
       console.log(res.data)
     })
@@ -31,11 +31,11 @@ const Inicio = (props) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     axios
-    .post('https://ape-experience.com/newsletters', { name, email })
+    .post('https://ape-experience.com/Newsletters', { name, email })
     .then(() => {
       setName('')
       setEmail('')
-      fetchnewsletters('');
+      fetchNewsletters('');
     })
     .catch((error) => {
       console.log('No ha podido enviarse sus suscripción')
