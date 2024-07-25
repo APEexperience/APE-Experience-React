@@ -35,7 +35,7 @@ function App() {
         />
         <Route component={Blog} exact path="/blog" />
         <Route component={Proyectos} exact path="/proyectos" />
-        <Route component={ViewNewsletter} exact path="/newsletters/:id" />
+        <Route component={ViewNewsletter} exact path="/views/ViewNewsletter" />
         <Route component={SolicitarServicio} exact path="/solicitar-servicio" />
         <Route component={Servicios} exact path="/servicios" />
         <Route component={Inicio} exact path="/" />
