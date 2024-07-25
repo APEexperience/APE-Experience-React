@@ -12,7 +12,7 @@ import './App.css'
 import Contacto from './views/contacto'
 import APEExperienceEnConstruccin from './views/ape-experience-en-construccin'
 import Blog from './views/blog'
-import ViewNewsletter from './views/ViewNewsletter'
+import ViewNewsletter from './views/Newsletters'
 import Proyectos from './views/proyectos'
 import SolicitarServicio from './views/solicitar-servicio'
 import Servicios from './views/servicios'
@@ -32,7 +32,7 @@ const App = () => {
         />
         <Route component={Blog} exact path="/blog" />
         <Route component={Proyectos} exact path="/proyectos" />
-        <Route component={ViewNewsletter} exact path="/views/ViewNewsletter" />
+        <Route component={Newsletters} exact path="/views/Newsletters/:id" />
         <Route component={SolicitarServicio} exact path="/solicitar-servicio" />
         <Route component={Servicios} exact path="/servicios" />
         <Route component={Inicio} exact path="/" />
