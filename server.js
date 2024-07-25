@@ -29,7 +29,7 @@ app.use(cors())
 
 //Routes
 //GET newsletter
-app.get('/newsletter', (req, res) => {
+app.get('/newsletters', (req, res) => {
     const newsletter = newsletters.find()
     .then((newsletter) => {
         res.json(newsletter)
@@ -40,7 +40,7 @@ app.get('/newsletter', (req, res) => {
 })
 
 //GET newsletter by ID
-app.get('/newsletter/:id', (req, res) => {
+app.get('/newsletters/:id', (req, res) => {
     const { id } = req.params
     const singlenewsletters = newsletters.findById(id)
     .then((singlenewsletters) => {
@@ -52,7 +52,7 @@ app.get('/newsletter/:id', (req, res) => {
 })
 
 //POST newsletter
-app.post('/newsletter', (req, res) => {
+app.post('/newsletters', (req, res) => {
     const { name, email } = req.body
     const newsletter = new newsletters({ name, email })
     newsletter.save()
@@ -66,7 +66,7 @@ app.post('/newsletter', (req, res) => {
 })
 
 //UPDATE newsletter
-app.put('/newsletter/:id', (req, res) => {
+app.put('/newsletters/:id', (req, res) => {
     const { id } = req.params
     const { name, email } = req.body
     const updatednewsletters = newsletters.findByIdAndUpdate(id,
@@ -81,7 +81,7 @@ app.put('/newsletter/:id', (req, res) => {
 })
 
 // DELETE newsletter
-app.delete('/newsletter/:id', (req, res) => {
+app.delete('/newsletters/:id', (req, res) => {
     const { id } = req.params
     const deletednewsletters = newsletters.findByIdAndDelete(id)
     .then((deletednewsletters) => {
