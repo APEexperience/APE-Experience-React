@@ -22,7 +22,8 @@ mongoose
 })
 
 //middleware
-app.use(bodyParser.json())
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors())
 
 // SCHEMA
@@ -52,7 +53,7 @@ app.get('/Newsletters/:id', (req, res) => {
 })
 
 //POST newsletter
-app.post('/Newsletters', (req, res) => {
+app.post('/Newsletters', async (req, res) => {
     const { name, email } = req.body
     const newsletter = new Newsletters({ name, email })
     newsletter.save()
