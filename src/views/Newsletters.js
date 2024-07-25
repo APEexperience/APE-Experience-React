@@ -1,6 +1,9 @@
 // /src/Newsletters.js
 import React, { useEffect, useState } from 'react'; // Importar React y hooks
-import ReactDOM from 'react-dom'; // Importar ReactDOM para la creación de elementos
+import { Link } from 'react-router-dom';
+
+import Script from 'dangerous-html/react';
+import { Helmet } from 'react-helmet';
 
 const Newsletters = () => {
   const [name, setName] = useState([]); // Estado para almacenar suscriptores
