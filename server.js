@@ -29,8 +29,8 @@ app.use(cors())
 
 //Routes
 //GET newsletter
-app.get('/newsletters', (req, res) => {
-    const newsletter = newsletters.find()
+app.get('/Newsletters', (req, res) => {
+    const newsletter = Newsletters.find()
     .then((newsletter) => {
         res.json(newsletter)
     })
@@ -40,11 +40,11 @@ app.get('/newsletters', (req, res) => {
 })
 
 //GET newsletter by ID
-app.get('/newsletters/:id', (req, res) => {
+app.get('/Newsletters/:id', (req, res) => {
     const { id } = req.params
-    const singlenewsletters = newsletters.findById(id)
-    .then((singlenewsletters) => {
-        res.json(singlenewsletters)
+    const singleNewsletters = Newsletters.findById(id)
+    .then((singleNewsletters) => {
+        res.json(singleNewsletters)
     })
     .catch((error) => {
         res.json({ message: 'El newsletter no ha podido registrar una ID', error })
@@ -52,9 +52,9 @@ app.get('/newsletters/:id', (req, res) => {
 })
 
 //POST newsletter
-app.post('/newsletters', (req, res) => {
+app.post('/Newsletters', (req, res) => {
     const { name, email } = req.body
-    const newsletter = new newsletters({ name, email })
+    const newsletter = new Newsletters({ name, email })
     newsletter.save()
     .then((newsletter) => {
         res.json({ message: 'El newsletter ha sido creado con éxito' })
@@ -66,13 +66,13 @@ app.post('/newsletters', (req, res) => {
 })
 
 //UPDATE newsletter
-app.put('/newsletters/:id', (req, res) => {
+app.put('/Newsletters/:id', (req, res) => {
     const { id } = req.params
     const { name, email } = req.body
-    const updatednewsletters = newsletters.findByIdAndUpdate(id,
+    const updatedNewsletters = Newsletters.findByIdAndUpdate(id,
         { name, email },
         { value: true })
-        .then((updatednewsletters) => {
+        .then((updatedNewsletters) => {
             res.json({ message: 'El newsletter se ha actualizado con éxito' })
         })
         .catch((error) => {
