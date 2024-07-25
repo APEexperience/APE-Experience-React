@@ -5,6 +5,6 @@ const newsletterSchema = mongoose.Schema({
     email: String
 })
 
-const newsletters = mongoose.model('newsletters', newsletterSchema)
+const Newsletters = mongoose.model('Newsletters', newsletterSchema)
 
-module.exports = newsletters
+module.exports = Newsletters
