@@ -20,16 +20,16 @@ const Inicio = (props) => {
 
   const fetchnewsletters = () => {
     axios
-    .get('http://localhost/newsletters')
+    .get('http://localhost:3001/newsletter')
     .then((res) => {
-      console.log(res.data)
+      console.log('Se han enviado los datos correctamente')
     })
   }
 
   const handleSubmit = (event) => {
     event.preventDefault();
     axios
-    .post('http://localhost/newsletters', { name, email })
+    .post('http://localhost:3001/newsletter', { name, email })
     .then(() => {
       setName('')
       setEmail('')

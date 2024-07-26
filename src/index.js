@@ -32,7 +32,7 @@ const App = () => {
         />
         <Route component={Blog} exact path="/blog" />
         <Route component={Proyectos} exact path="/proyectos" />
-        <Route component={Newsletters} exact path="/newsletters/:id" />
+        <Route component={Newsletters} exact path="/newsletter/:id" />
         <Route component={SolicitarServicio} exact path="/solicitar-servicio" />
         <Route component={Servicios} exact path="/servicios" />
         <Route component={Inicio} exact path="/" />

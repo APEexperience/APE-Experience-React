@@ -3,6 +3,9 @@ const mongoose = require('mongoose')
 const cors = require('cors')
 const bodyParser = require('body-parser')
 
+
+const news = require('./models/newsletterSchema.js')
+
 // connect to express app
 const app = express()
 // connect to mongoDB
@@ -13,7 +16,7 @@ mongoose
     useUnifiedTopology: true,
 })
 .then (() => {
-    app.listen(process.env.PORT || 4000, () => {
+    app.listen(process.env.PORT || 3001, () => {
         console.log('Server and MongoDB are connected')
     })
 })
@@ -26,11 +29,15 @@ app.use(bodyParser.json())
 app.use(cors())
 
 // SCHEMA
+mongoose.connect(dbURI)
+  .then(console.log("DB Connected"))
+  .catch( err => console.log("Error DB : ", err) )
+
 
 //Routes
 //GET newsletter
 app.get('/newsletter', (req, res) => {
-    const newsletter = newsletters.find()
+    const newsletter = news.find()
     .then((newsletter) => {
         res.json(newsletter)
     })
@@ -42,7 +49,7 @@ app.get('/newsletter', (req, res) => {
 //GET newsletter by ID
 app.get('/newsletter/:id', (req, res) => {
     const { id } = req.params
-    const singlenewsletters = newsletters.findById(id)
+    const singlenewsletters = news.findById(id)
     .then((singlenewsletters) => {
         res.json(singlenewsletters)
     })
@@ -54,8 +61,7 @@ app.get('/newsletter/:id', (req, res) => {
 //POST newsletter
 app.post('/newsletter', (req, res) => {
     const { name, email } = req.body
-    const newsletter = new newsletters({ name, email })
-    newsletter.save()
+    const newsletter = news.create({ name, email })
     .then((newsletter) => {
         res.json({ message: 'El newsletter ha sido creado con éxito' })
     })
@@ -69,7 +75,7 @@ app.post('/newsletter', (req, res) => {
 app.put('/newsletter/:id', (req, res) => {
     const { id } = req.params
     const { name, email } = req.body
-    const updatednewsletters = newsletters.findByIdAndUpdate(id,
+    const updatednewsletters = news.findByIdAndUpdate(id,
         { name, email },
         { value: true })
         .then((updatednewsletters) => {
@@ -83,7 +89,7 @@ app.put('/newsletter/:id', (req, res) => {
 // DELETE newsletter
 app.delete('/newsletter/:id', (req, res) => {
     const { id } = req.params
-    const deletednewsletters = newsletters.findByIdAndDelete(id)
+    const deletednewsletters = news.findByIdAndDelete(id)
     .then((deletednewsletters) => {
         res.json({ message: 'El newsletter ha sido eliminado con éxito' })
     })
