@@ -636,7 +636,7 @@ const Inicio = (props) => {
           Suscr�bete a mi newsletter para poder recibir promociones y descuentos
         </p>
         <div className="inicio-content5">
-          <form onSubmit={handleSubmit} netlify>
+          <form onSubmit={handleSubmit}>
             <div className="inicio-inputs">
               <input
                 type="text"
