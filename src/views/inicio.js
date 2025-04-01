@@ -48,7 +48,7 @@ const Inicio = (props) => {
         <meta property="og:title" content="APE Experience" />
       </Helmet>
       <video
-        src="https://ape-experience.com/Material web/Imagen%20Heroe%20APE%20Experience.mp4"
+        src="https://ape-experience.net/Material web/Imagen%20Heroe%20APE%20Experience.mp4"
         loop
         muted
         preload="metadata"
