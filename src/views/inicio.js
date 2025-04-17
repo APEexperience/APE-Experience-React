@@ -21,7 +21,7 @@ const Inicio = (props) => {
 
   const fetchNewsletters = () => {
     axios
-    .get('https://ape-experience.com/Newsletters')
+    .get('https://ape-experience.net/Newsletters')
     .then((res) => {
       console.log(res.data)
     })
@@ -30,7 +30,7 @@ const Inicio = (props) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     axios
-    .post('https://ape-experience.com/Newsletters', { name, email })
+    .post('https://ape-experience.net/Newsletters', { name, email })
     .then(() => {
       setName('')
       setEmail('')
