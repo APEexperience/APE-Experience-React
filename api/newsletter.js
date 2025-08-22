@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import Newsletter from '../../models/newsletterSchema'; // Ajusta la ruta si es necesario
+import Newsletter from '../models/newsletterSchema'; // Ajusta la ruta si es necesario
 
 const uri = process.env.MONGODB_URI;
 
