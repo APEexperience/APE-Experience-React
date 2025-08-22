@@ -21,7 +21,7 @@ const Inicio = (props) => {
 
 const fetchNewsletters = () => {
   axios
-  .get('./api/newsletters') // Cambia la URL absoluta por una relativa
+  .get('./api/newsletter') // Cambia la URL absoluta por una relativa
   .then((res) => {
     console.log(res.data)
   })
@@ -30,7 +30,7 @@ const fetchNewsletters = () => {
 const handleSubmit = (event) => {
   event.preventDefault();
   axios
-  .post('./api/newsletters', { name, email }) // Cambia la URL
+  .post('./api/newsletter', { name, email }) // Cambia la URL
   .then(() => {
     setName('')
     setEmail('')
