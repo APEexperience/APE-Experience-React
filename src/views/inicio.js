@@ -19,27 +19,27 @@ const Inicio = (props) => {
     fetchNewsletters();
   }, [])
 
-  const fetchNewsletters = () => {
-    axios
-    .get('https://ape-experience.net/Newsletters')
-    .then((res) => {
-      console.log(res.data)
-    })
-  }
+const fetchNewsletters = () => {
+  axios
+  .get('/api/Newsletters') // Cambia la URL absoluta por una relativa
+  .then((res) => {
+    console.log(res.data)
+  })
+}
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    axios
-    .post('https://ape-experience.net/Newsletters', { name, email })
-    .then(() => {
-      setName('')
-      setEmail('')
-      fetchNewsletters('');
-    })
-    .catch((error) => {
-      console.log('No ha podido enviarse sus suscripción')
-    })
-  }
+const handleSubmit = (event) => {
+  event.preventDefault();
+  axios
+  .post('/api/Newsletters', { name, email }) // Cambia la URL
+  .then(() => {
+    setName('')
+    setEmail('')
+    fetchNewsletters();
+  })
+  .catch((error) => {
+    console.log('No ha podido enviarse sus suscripción')
+  })
+}
 
   return (
     <div className="inicio-container">
