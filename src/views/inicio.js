@@ -20,7 +20,7 @@ const Inicio = (props) => {
 
   const fetchNewsletters = () => { // Nombre de función corregido
     axios
-    .get('/api/newsletter') // URL corregida
+    .get('./api/newsletter') // URL corregida
     .then((res) => {
       console.log(res.data)
     })
@@ -29,7 +29,7 @@ const Inicio = (props) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     axios
-    .post('/api/newsletter', { name, email }) // URL corregida
+    .post('./api/newsletter', { name, email }) // URL corregida
     .then(() => {
       setName('')
       setEmail('')
