@@ -7,7 +7,7 @@ import { Helmet } from 'react-helmet'
 
 import SectionNumeral from '../components/section-numeral'
 import BlogPostCard2 from '../components/blog-post-card2'
-import Newsletters from './api/newsletter'
+import newsletter from './api/newsletter'
 
 import './inicio.css'
 
@@ -19,7 +19,7 @@ const Inicio = (props) => {
     fetchNewsletters();
   }, [])
 
-const fetchNewsletters = () => {
+const fetchnewsletter = () => {
   axios
   .get('./api/newsletter') // Cambia la URL absoluta por una relativa
   .then((res) => {
