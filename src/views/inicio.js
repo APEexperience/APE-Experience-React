@@ -7,7 +7,6 @@ import { Helmet } from 'react-helmet'
 
 import SectionNumeral from '../components/section-numeral'
 import BlogPostCard2 from '../components/blog-post-card2'
-import newsletter from './api/newsletter'
 
 import './inicio.css'
 
@@ -19,27 +18,27 @@ const Inicio = (props) => {
     fetchNewsletters();
   }, [])
 
-const fetchnewsletter = () => {
-  axios
-  .get('./api/newsletter') // Cambia la URL absoluta por una relativa
-  .then((res) => {
-    console.log(res.data)
-  })
-}
+  const fetchNewsletters = () => { // Nombre de función corregido
+    axios
+    .get('/api/newsletter') // URL corregida
+    .then((res) => {
+      console.log(res.data)
+    })
+  }
 
-const handleSubmit = (event) => {
-  event.preventDefault();
-  axios
-  .post('./api/newsletter', { name, email }) // Cambia la URL
-  .then(() => {
-    setName('')
-    setEmail('')
-    fetchNewsletters();
-  })
-  .catch((error) => {
-    console.log('No ha podido enviarse sus suscripción')
-  })
-}
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    axios
+    .post('/api/newsletter', { name, email }) // URL corregida
+    .then(() => {
+      setName('')
+      setEmail('')
+      fetchNewsletters();
+    })
+    .catch((error) => {
+      console.log('No ha podido enviarse sus suscripción', error)
+    })
+  }
 
   return (
     <div className="inicio-container">
